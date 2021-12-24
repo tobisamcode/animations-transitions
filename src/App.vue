@@ -9,13 +9,15 @@
   </base-modal>
   <div class="container">
     <button @click="showDialog">Show Dialog</button>
-  </div>
+  </div>  
 </template>  
 
 <script>
 export default {
   data() {
-    return { dialogIsVisible: false };
+    return { 
+      dialogIsVisible: false
+    };
   },
   methods: {
     showDialog() {
