@@ -12,7 +12,7 @@
   </div>
 
   
-  <base-modal @close="hideDialog" v-if="dialogIsVisible">
+  <base-modal @close="hideDialog" :open="dialogIsVisible">
     <p>This is a test dialog!</p>
     <button @click="hideDialog">Close it!</button>
   </base-modal>
@@ -128,13 +128,6 @@ button:active {
 }
 
 
-.modal-enter-from {
-
-}
-
-.modal-enter-active{}
-
-.modal-enter-to{}
 
 @keyframes slide-scale {
   0% {
