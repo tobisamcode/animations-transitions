@@ -111,6 +111,19 @@ button:active {
   transform: translateY(0);
 }
 
+.v-leave-from{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.v-leave-active{
+  transition: all .3s ease-in;
+}
+
+.v-leave-to{
+  opacity: 0;
+  transform: translateY(30px);
+}
 
 @keyframes slide-fade {
   0% {
