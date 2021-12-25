@@ -5,7 +5,7 @@
   </div>
 
   <div class="container">
-    <transition name="para" @before-enter="beforeEnter()">
+    <transition name="para" @before-enter="beforeEnter()" @before-leave="beforeLeave()">
       <p v-if="paraIsVisible">This is only sometimes visible...</p>
     </transition>
     <button @click="toggleParagraph()">Toggle Paragraph</button>
@@ -42,6 +42,9 @@ export default {
   methods: {
     beforeEnter() {
       console.log('before enter')
+    },
+    beforeLeave() {
+      console.log('before leave')
     },
     showUsers() {
       this.usersAreVisible = true;
