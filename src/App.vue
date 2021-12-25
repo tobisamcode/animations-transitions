@@ -12,10 +12,12 @@
   </div>
 
 
-  <div class="container">
-    <button @click="showUsers()" v-if="!usersAreVisible">Show Users</button>
-    <button @click="hideUsers()" v-if="usersAreVisible">Hide Users</button>
-  </div>
+  <transition name="fade-button">
+    <div class="container">
+      <button @click="showUsers()" v-if="!usersAreVisible">Show Users</button>
+      <button @click="hideUsers()" v-if="usersAreVisible">Hide Users</button>
+    </div>
+  </transition>
   
   <base-modal @close="hideDialog" :open="dialogIsVisible">
     <p>This is a test dialog!</p>
