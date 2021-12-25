@@ -14,7 +14,7 @@
     @leave="leave()"
     @after-leave="afterLeave()"
     >
-      <p v-if="paraIsVisible">This is only sometimes visible...</p>
+      <p v-if="paraIsVisible"> This is only sometimes visible... </p>
     </transition>
     <button @click="toggleParagraph()">Toggle Paragraph</button>
   </div>
@@ -51,10 +51,19 @@ export default {
     beforeEnter(el) {
       console.log('before enter');
       console.log(el);
+      el.style.opacity = 0;
     },
     enter(el) {
       console.log('enter');
       console.log(el);
+      let round = 1
+      const interval = setInterval(function() {
+        el.style.opacity = round * .01;
+        round++
+        if (round > 100) {
+          clearInterval(interval);
+        }
+      }, 20);
     },
     afterEnter(el) {
       console.log('after enter');
