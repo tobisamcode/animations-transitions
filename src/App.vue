@@ -40,11 +40,13 @@ export default {
     };
   },
   methods: {
-    beforeEnter() {
-      console.log('before enter')
+    beforeEnter(el) {
+      console.log('before enter');
+      console.log(el);
     },
-    beforeLeave() {
-      console.log('before leave')
+    beforeLeave(el) {
+      console.log('before leave');
+      console.log(el);
     },
     showUsers() {
       this.usersAreVisible = true;
