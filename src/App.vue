@@ -5,7 +5,9 @@
   </div>
 
   <div class="container">
-    <p v-if="paraIsVisible">THis is only sometimes visible...</p>
+    <transition>
+      <p v-if="paraIsVisible">THis is only sometimes visible...</p>
+    </transition>
     <button @click="toggleParagraph()">Toggle Paragraph</button>
   </div>
 
