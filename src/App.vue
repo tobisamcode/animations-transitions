@@ -13,8 +13,8 @@
 
 
   <div class="container">
-    <button>Show Users</button>
-    <button>Hide Users</button>
+    <button @click="showUsers()" v-if="!usersAreVisible">Show Users</button>
+    <button @click="hideUsers()" v-if="usersAreVisible">Hide Users</button>
   </div>
   
   <base-modal @close="hideDialog" :open="dialogIsVisible">
@@ -34,10 +34,19 @@ export default {
     return { 
       animatedBlock: false,
       dialogIsVisible: false,
-      paraIsVisible: false
+      paraIsVisible: false,
+      usersAreVisible: false
     };
   },
   methods: {
+    showUsers() {
+      this.usersAreVisible = true;
+    },
+
+    hideUsers() {
+      this.usersAreVisible = false;
+    },
+
     animateBlock() {
       this.animatedBlock = true;
     },
