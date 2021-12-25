@@ -11,10 +11,12 @@
     <button @click="toggleParagraph()">Toggle Paragraph</button>
   </div>
 
+  
   <base-modal @close="hideDialog" v-if="dialogIsVisible">
     <p>This is a test dialog!</p>
     <button @click="hideDialog">Close it!</button>
   </base-modal>
+  
 
   <div class="container">
     <button @click="showDialog">Show Dialog</button>
@@ -124,6 +126,15 @@ button:active {
   opacity: 0;
   transform: translateY(30px);
 }
+
+
+.modal-enter-from {
+
+}
+
+.modal-enter-active{}
+
+.modal-enter-to{}
 
 @keyframes slide-scale {
   0% {
