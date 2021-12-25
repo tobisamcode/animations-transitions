@@ -148,7 +148,7 @@ button:active {
   animation: slide-fade .7s ease-out forwards;
 }
 
-.para-enter-from {
+/* .para-enter-from {
   opacity: 0;
   transform: translateY(-30px);
 }
@@ -174,7 +174,7 @@ button:active {
 .para-leave-to{
   opacity: 0;
   transform: translateY(30px);
-}
+} */
 
 
 .fade-button-enter-from,
