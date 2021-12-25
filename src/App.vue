@@ -11,6 +11,11 @@
     <button @click="toggleParagraph()">Toggle Paragraph</button>
   </div>
 
+
+  <div class="container">
+    <button>Show Users</button>
+    <button>Hide Users</button>
+  </div>
   
   <base-modal @close="hideDialog" :open="dialogIsVisible">
     <p>This is a test dialog!</p>
