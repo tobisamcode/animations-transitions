@@ -6,7 +6,7 @@
 
   <div class="container">
     <transition>
-      <p v-if="paraIsVisible">THis is only sometimes visible...</p>
+      <p v-if="paraIsVisible">This is only sometimes visible...</p>
     </transition>
     <button @click="toggleParagraph()">Toggle Paragraph</button>
   </div>
@@ -96,6 +96,21 @@ button:active {
   /* transform: translateX(-50px); */
   animation: slide-fade .7s ease-out forwards;
 }
+
+.v-enter-from {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.v-enter-active {
+  transition: all .3s ease-out;
+}
+
+.v-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 @keyframes slide-fade {
   0% {
