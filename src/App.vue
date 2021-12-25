@@ -12,7 +12,7 @@
   <div class="container">
     <button @click="showDialog">Show Dialog</button>
   </div>  
-</template>  
+</template>
 
 <script>
 export default {
