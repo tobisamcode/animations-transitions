@@ -1,6 +1,11 @@
 <template>
-  <router-view></router-view>
 
+  <router-view v-slot="slotProps">
+    <transition name="route">
+      <component :is="slotProps.Component"></component>
+    </transition>
+  </router-view>
+  
 
 
 
@@ -279,4 +284,22 @@ button:active {
     transform: translateX(-150px) scale(1);
   }
 }
+
+// ANIMATING ROUTES
+.route-enter-from{}
+
+.route-enter-active{
+  animation: slide-scale .4s ease-out;
+}
+
+.route-enter-to{}
+
+.route-leave-active {
+  animation: slide-scale .4s ease-in;
+}
+
+
+
+
+
 </style>
