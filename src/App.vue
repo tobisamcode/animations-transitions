@@ -14,7 +14,7 @@
     @leave="leave()"
     @after-leave="afterLeave()"
     >
-      <p v-if="paraIsVisible"> This is only sometimes visible... </p>
+      <p v-if="paraIsVisible">This is only sometimes visible...</p>
     </transition>
     <button @click="toggleParagraph()">Toggle Paragraph</button>
   </div>
@@ -53,7 +53,7 @@ export default {
       console.log(el);
       el.style.opacity = 0;
     },
-    enter(el) {
+    enter(el, done) {
       console.log('enter');
       console.log(el);
       let round = 1
@@ -62,6 +62,7 @@ export default {
         round++
         if (round > 100) {
           clearInterval(interval);
+          done();
         }
       }, 20);
     },
@@ -75,14 +76,21 @@ export default {
     },
     leave(el) {
       console.log('leave');
-      console.log(el)
+      console.log(el);
+      let round = 1;
+      const interval = setInterval(() => {
+        el.style.opacity = 1 - round * 0.01;
+        round++
+        if (round > 100) {
+          clearInterval(interval);
+          done();
+        }        
+      }, 20);
     },
     afterLeave(el) {
       console.log('after leave');
       console.log(el);
     },
-
-
     showUsers() {
       this.usersAreVisible = true;
     },
