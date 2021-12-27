@@ -1,5 +1,9 @@
 <template>
   <div class="container">
+    <users-list></users-list>
+  </div>
+
+  <div class="container">
     <div class="block" :class="{ animate: animatedBlock }"></div>
     <button @click="animateBlock()">Animate</button>
   </div>
@@ -143,6 +147,7 @@ export default {
 <style>
 * {
   box-sizing: border-box;
+  list-style: none;
 }
 html {
   font-family: sans-serif;
