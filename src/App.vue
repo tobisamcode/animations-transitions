@@ -74,7 +74,7 @@ export default {
       console.log('before leave');
       console.log(el);
     },
-    leave(el) {
+    leave(el, done) {
       console.log('leave');
       console.log(el);
       let round = 1;
