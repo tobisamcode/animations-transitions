@@ -13,7 +13,7 @@
     @before-leave="beforeLeave"
     @leave="leave"
     @after-leave="afterLeave"
-    >
+    >x
       <p v-if="paraIsVisible">This is only sometimes visible...</p>
     </transition>
     <button @click="toggleParagraph()">Toggle Paragraph</button>
