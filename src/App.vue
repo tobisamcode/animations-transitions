@@ -169,6 +169,7 @@ button:active {
   background-color: #a80b48;
   border-color: #a80b48;
 }
+
 .block {
   width: 8rem;
   height: 8rem;
@@ -176,6 +177,7 @@ button:active {
   margin-bottom: 2rem;
   /* transition: transform .5s ease-in-out; */
 }
+
 .container {
   max-width: 40rem;
   margin: 2rem auto;
@@ -244,7 +246,7 @@ button:active {
 
 @keyframes slide-scale {
   0% {
-    transform: translateX(0) scale(1)
+    transform: translateX(0) scale(1);
   }
   70% {
     transform: translateX(-120px) scale(1.1);
