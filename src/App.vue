@@ -6,28 +6,6 @@
     </transition>
   </router-view>
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <div class="container">
     <users-list></users-list>
   </div>
