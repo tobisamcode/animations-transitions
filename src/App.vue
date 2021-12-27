@@ -7,12 +7,12 @@
   <div class="container">
     <transition 
     name="para" 
-    @before-enter="beforeEnter()"
-    @enter="enter()"
-    @after-enter="afterEnter()" 
-    @before-leave="beforeLeave()"
-    @leave="leave()"
-    @after-leave="afterLeave()"
+    @before-enter="beforeEnter"
+    @enter="enter"
+    @after-enter="afterEnter" 
+    @before-leave="beforeLeave"
+    @leave="leave"
+    @after-leave="afterLeave"
     >
       <p v-if="paraIsVisible">This is only sometimes visible...</p>
     </transition>
@@ -73,6 +73,7 @@ export default {
     beforeLeave(el) {
       console.log('before leave');
       console.log(el);
+      el.style.opacity = 1;
     },
     leave(el, done) {
       console.log('leave');
