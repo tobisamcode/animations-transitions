@@ -1,6 +1,8 @@
 <template>
     <ul>
-        <li v-for="user in users" :key="user" @click="removeUser(user)"> {{ user }}</li>
+        <transition-group>
+            <li v-for="user in users" :key="user" @click="removeUser(user)"> {{ user }}</li>    
+        </transition-group>
     </ul>
 
     <div>
@@ -43,6 +45,7 @@ ul {
 ul li {
     border: 1px solid #ccc;
     padding: 1rem;
+
     text-align: center;
     cursor: pointer ;
 }
